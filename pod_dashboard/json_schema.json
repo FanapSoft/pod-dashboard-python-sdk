@@ -1,0 +1,1037 @@
+{
+    "createDashboard": {
+        "type": "object",
+        "properties": {
+                    "config": {
+                        "type": "object",
+                        "description": "اطلاعات تنظیمات مربوط به داشبورد کاربر"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "description": "مکان قرارگیری داشبورد میان لیست داشبوردهای کاربر را مشخص می کند."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "نام داشبورد"
+                    },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "name"
+        ]
+    },
+    "getUserDashboards": {
+        "type": "object",
+        "properties": {
+            "page": {
+                "type": "integer",
+                "description": "شماره صفحه توجه: شماره صفحه از صفر شروع می شود."
+            },
+            "size": {
+                "type": "integer",
+                "description": "تعداد آیتم بازگشتی"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": []
+    },
+    "getAllDashboards": {
+        "type": "object",
+        "properties": {
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": []
+    },
+    "updateDashboard": {
+        "type": "object",
+        "properties": {
+            "config": {
+                        "type": "string",
+                        "description": "اطلاعات تنظیمات مربوط به داشبورد کاربر"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "description": "مکان قرارگیری داشبورد میان لیست داشبوردهای کاربر را مشخص می کند."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "نام داشبورد"
+                    },
+            "dashboard_id": {
+                "type": "integer",
+                "description": "شناسه داشبورد"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "dashboard_id","name"
+        ]
+    },
+    "removeDashboard": {
+        "type": "object",
+        "properties": {
+            "dashboard_id": {
+                "type": "integer",
+                "description": "شناسه داشبورد برای حذف"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "dashboard_id"
+        ]
+    },
+    "getAllCollaboratorReports": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string"
+            },
+            "page": {
+                "type": "integer",
+                "description": "شماره صفحه توجه: شماره صفحه از صفر شروع می شود."
+            },
+            "size": {
+                "type": "integer",
+                "description": "تعداد آیتم بازگشتی"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": []
+    },
+    "getCollaboratorReport": {
+        "type": "object",
+        "properties": {
+            "report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "report_id"
+        ]
+    },
+    "addUserParam": {
+        "type": "object",
+        "properties": {
+            "report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش"
+            },
+            "dashboard_id": {
+                "type": "integer",
+                "description": "شناسه داشبوردی که می خواهید گزارش در آن قرار گیرد."
+            },
+            "name": {
+                "type": "string",
+                "description": "نام گزارش ساخته شده توسط شما"
+            },
+            "params": {
+                "type": "array",
+                "description": "اطلاعات پارامترهای مربوط به کاربر برای یک گزارش",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "key": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    },
+                    "additionalItems": false,
+                    "required": [
+                        "key",
+                        "value"
+                    ]
+                }
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "dashboard_id",
+            "report_id"
+        ]
+    },
+    "addDrillDownUserParam": {
+        "type": "object",
+        "properties": {
+            "report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش"
+            },
+            "user_report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش کاربر"
+            },
+            "params": {
+                "type": "array",
+                "description": "اطلاعات پارامترهای مربوط به کاربر برای یک گزارش",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "key": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    },
+                    "additionalItems": false,
+                    "required": [
+                        "key",
+                        "value"
+                    ]
+                }
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "report_id",
+            "user_report_id",
+            "params"
+        ]
+    },
+    "getAllUserReports": {
+        "type": "object",
+        "properties": {
+            "page": {
+                "type": "integer",
+                "description": "شماره صفحه توجه: شماره صفحه از صفر شروع می شود."
+            },
+            "size": {
+                "type": "integer",
+                "description": "تعداد آیتم بازگشتی"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": []
+    },
+    "getUserReport": {
+        "type": "object",
+        "properties": {
+            "user_report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "user_report_id"
+        ]
+    },
+    "executeUserReport": {
+        "type": "object",
+        "properties": {
+            "user_report_id": {
+                "type": "integer"
+            },
+            "page": {
+                "type": "integer",
+                "description": "شماره صفحه، توجه: شماره صفحه از صفر شروع می شود."
+            },
+            "size": {
+                "type": "integer",
+                "description": "تعداد آیتم بازگشتی"
+            },
+            "load_from_cache": {
+                "type": "boolean",
+                "description": "بارگزاری خروجی گزارش از کش"
+            },
+            "execute_params": {
+                "type": "object",
+                "properties": {
+                    "filterVOS": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "value"
+                        ]
+                    },
+                    "parentParams": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key",
+                                "value"
+                            ]
+                        }
+                    },
+                    "orderByElementVOS": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "columnNumber": {
+                                    "type": "integer"
+                                },
+                                "desc": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "user_report_id"
+        ]
+    },
+    "getExcelUserReport": {
+        "type": "object",
+        "properties": {
+            "user_report_id": {
+                "type": "integer"
+            },
+            "execute_params": {
+                "type": "object",
+                "properties": {
+                    "filterVOS": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "value"
+                        ]
+                    },
+                    "parentParams": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "integer"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key",
+                                "value"
+                            ]
+                        }
+                    },
+                    "orderByElementVOS": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "columnNumber": {
+                                    "type": "integer"
+                                },
+                                "desc": {
+                                    "type": [
+                                        "boolean",
+                                        "string"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "user_report_id"
+        ]
+    },
+    "getCSVUserReport": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer"
+            },
+            "CSVFileUrl": {
+                "type": "string"
+            },
+            "content": {
+                "type": "array",
+                "items": {
+                    "filterVOS": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "value"
+                        ]
+                    },
+                    "parentParams": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "key": {
+                                    "type": "integer"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key",
+                                "value"
+                            ]
+                        }
+                    },
+                    "orderByElementVOS": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "columnNumber": {
+                                    "type": "integer"
+                                },
+                                "desc": {
+                                    "type": [
+                                        "boolean",
+                                        "string"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "id"
+        ]
+    },
+    "removeUserReport": {
+        "type": "object",
+        "properties": {
+            "user_report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش کاربر"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "user_report_id"
+        ]
+    },
+    "shareDashboard": {
+        "type": "object",
+        "properties": {
+            "share_id": {
+                "type": "integer",
+                "description": "شناسه داشبورد"
+            },
+            "identity": {
+                "oneOf": [
+                    {
+                        "type": "string",
+                        "description": "نام کاربری، ایمیل یا تلفن همراه کاربرانی که داشبورد با آن ها به اشتراک گذاشته می شود به صورت comma separated(جدا شده با کاما)."
+                    },
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "editAccessLevel": {
+                "type": "string"
+            },
+            "shareAccessLevel": {
+                "type": "string"
+            },
+            "expire": {
+                "type": "string",
+                "pattern": "^((19[0-9]{2})|([2][0-9]{3}))-([1-9]|0[1-9]|1[0-2])-([1-2][0-9]|0[1-9]|3[0-1]|[1-9])$"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "dashboard_id",
+            "identity",
+            "expire"
+        ]
+    },
+    "removeSharedDashboard": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "id"
+        ]
+    },
+    "getDashboardUsers": {
+        "type": "object",
+        "properties": {
+            "dashboard_id": {
+                "type": "integer"
+            },
+            "token": {
+                "type": "string",
+                "description": "توکنی که بعد از ورود به سیستم یا از پنل کسب و کار دریافت شده است"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "dashboard_id"
+        ]
+    },
+    "getSharedDashboards": {
+        "type": "object",
+        "properties": {
+            "page": {
+                "type": "integer",
+                "description": "شماره صفحه، توجه: شماره صفحه از صفر شروع می شود."
+            },
+            "size": {
+                "type": "integer",
+                "description": "تعداد آیتم بازگشتی"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": []
+    },
+    "updateSharedDashboard": {
+        "type": "object",
+        "properties": {
+            "config": {
+                "type": "object",
+                "description": "اطلاعات تنظیمات مربوط به داشبورد کاربر"
+            },
+            "order": {
+                "type": "integer",
+                "description": "مکان قرارگیری داشبورد میان لیست داشبوردهای کاربر را مشخص می کند."
+            },
+            "dashboard_id": {
+                "type": "integer",
+                "description": "شناسه داشبورد"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "dashboard_id",
+            "config"
+        ]
+    },
+    "addUserCollaborator": {
+        "type": "object",
+        "properties": {
+            "identity": {
+                "type": "string",
+                "description": "نام کاربری، ایمیل یا تلفن همراه کاربری که می خواهید برای او دسترسی ایجاد کنید."
+            },
+            "report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "report_id",
+            "identity"
+        ]
+    },
+    "getUserCollaborators": {
+        "type": "object",
+        "properties": {
+            "report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش کاربر"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "report_id"
+        ]
+    },
+    "removeCollaborator": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "integer",
+                "description": "شناسه کاربری که می خواهیم دسترسی او به گزارش را لغو کنیم."
+            },
+            "report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش کاربر"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "report_id",
+            "user_id"
+        ]
+    },
+    "getUserReportHash": {
+        "type": "object",
+        "properties": {
+            "user_report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش کاربر"
+            },
+            "token": {
+                "type": "string",
+                "description": "توکنی که بعد از ورود به سیستم یا از پنل کسب و کار دریافت شده است"
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "user_report_id"
+        ]
+    },
+    "getPublicUserReport": {
+        "type": "object",
+        "properties": {
+            "user_report_id": {
+                "type": "integer",
+                "description": "شناسه گزارش کاربر"
+            },
+            "hash": {
+                "type": "string",
+                "description": "هش مربوط به گزارش کاربر، برای دریافت این هش باید متد getUserReportHash را فراخوانی کنید."
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "user_report_id",
+            "hash"
+        ]
+    },
+    "publicUserReportExecute": {
+        "type": "object",
+        "properties": {
+            "user_report_id": {
+                "type": "integer"
+            },
+            "page": {
+                "type": "integer",
+                "default": 0,
+                "description": "شماره صفحه، توجه: شماره صفحه از صفر شروع می شود."
+            },
+            "size": {
+                "type": "integer",
+                "default": 10,
+                "description": "تعداد آیتم بازگشتی"
+            },
+            "loadFromCache": {
+                "type": [
+                    "boolean",
+                    "string"
+                ],
+                "default": false,
+                "description": "بارگزاری خروجی گزارش از کش"
+            },
+            "content": {
+                "type": "array",
+                "items": {
+                    "filterVOS": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "value"
+                        ]
+                    },
+                    "parentParams": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "key": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key",
+                                "value"
+                            ]
+                        }
+                    },
+                    "orderByElementVOS": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "columnNumber": {
+                                    "type": "integer"
+                                },
+                                "desc": {
+                                    "type": [
+                                        "boolean",
+                                        "string"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "hash": {
+                "type": "string",
+                "description": "هش مربوط به گزارش کاربر، برای دریافت این هش باید متد getUserReportHash را فراخوانی کنید."
+            },
+            "scVoucherHash": {
+                "type": "array",
+                "title": "کد تخفیف برای فراخوانی سرویس کال",
+                "description": "کد تخفیف برای فراخوانی سرویس کال",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "scApiKey": {
+                "type": "string",
+                "title": "توکن برای فراخوانی سرویس کال"
+            }
+        },
+        "required": [
+            "user_report_id",
+            "hash"
+        ]
+    }
+}

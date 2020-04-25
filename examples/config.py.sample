@@ -1,0 +1,4 @@
+# coding=utf-8
+
+API_TOKEN = "YOUR_API_TOKEN"
+SERVER_MODE = "sandbox"  # sandbox or production

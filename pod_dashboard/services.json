@@ -1,0 +1,237 @@
+{
+    "post_v1_dashboard": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "post",
+        "products": {
+            "production": 39424,
+            "sandbox": 47111
+        }
+    },
+    "get_v1_dashboard": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39392,
+            "sandbox": 47110
+        }
+    },
+    "get_v1_dashboard_all": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39395,
+            "sandbox": 47116
+        }
+    },
+    "put_v1_dashboard": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39425,
+            "sandbox": 47112
+        }
+    },
+    "delete_v1_dashboard": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39393,
+            "sandbox": 47114
+        }
+    },
+    "get_v1_report_CollaboratorReports": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39404,
+            "sandbox": 47125
+        }
+    },
+    "get_v1_report_CollaboratorReport_{id}": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39405,
+            "sandbox": 47126
+        }
+    },
+    "post_v1_report_{id}_param": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39409,
+            "sandbox": 47130
+        }
+    },
+    "post_v1_report_{id}_userreport_{userReportId}_param": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39410,
+            "sandbox": 47131
+        }
+    },
+    "get_v1_userreport": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39412,
+            "sandbox": 47133
+        }
+    },
+    "get_v1_userreport_{id}": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39413,
+            "sandbox": 47134
+        }
+    },
+    "post_v1_userreport_{userReportId}_exec": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39422,
+            "sandbox": 47143
+        }
+    },
+    "post_v1_userreport_{userReportId}_getXLS": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39421,
+            "sandbox": 47142
+        }
+    },
+    "post_v1_userreport_{userReportId}_getCSV": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39420,
+            "sandbox": 47141
+        }
+    },
+    "delete_v1_userreport_{id}": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39415,
+            "sandbox": 47136
+        }
+    },
+    "get_v1_dashboard_{dashboardId}_share": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39396,
+            "sandbox": 47117
+        }
+    },
+    "get_v1_dashboard_{id}_users": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39399,
+            "sandbox": 47120
+        }
+    },
+    "delete_v1_dashboard_shared_{id}": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39398,
+            "sandbox": 47119
+        }
+    },
+    "get_v1_dashboard_shared": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39394,
+            "sandbox": 47115
+        }
+    },
+    "put_v1_dashboard_shared_{id}": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39397,
+            "sandbox": 47118
+        }
+    },
+    "get_v1_report_{id}_addUser": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39406,
+            "sandbox": 47127
+        }
+    },
+    "get_v1_report_{id}_users": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39408,
+            "sandbox": 47129
+        }
+    },
+    "delete_v1_report_{id}_removeUser": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39407,
+            "sandbox": 47128
+        }
+    },
+
+    "get_v1_userreport_{id}_hash": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39417,
+            "sandbox": 47138
+        }
+    },
+    "get_v1_userreport_{id}_publicGet": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39416,
+            "sandbox": 47137
+        }
+    },
+    "get_v1_userreport_{userReportId}_publicExec": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": 39418,
+            "sandbox": 47139
+        }
+    }
+}
