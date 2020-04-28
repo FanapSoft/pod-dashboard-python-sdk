@@ -1,0 +1,5 @@
+# coding=utf-8
+
+API_TOKEN = ""
+SERVER_MODE = "sandbox"  # sandbox or production
+IDENTITY = ""  # username for share dashboard
