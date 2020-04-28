@@ -88,16 +88,11 @@ class PodDashboard(PodBase):
             super(PodDashboard, self)._get_sc_product_settings("/v1/dashboard"), params=kwargs,
             headers=self._get_headers(), internal=False, **kwargs))
 
-    def get_all_dashboards(self, page=0, size=10, **kwargs):
+    def get_all_dashboards(self, **kwargs):
         """
         تمام داشبوردهای قابل مشاهده توسط کاربر
-
-        :param int page: شماره صفحه
-        :param int size: تعداد رکورد در هر صفحه
         :return: dict
         """
-        kwargs["page"] = page
-        kwargs["size"] = size
 
         self._validate(kwargs, "getAllDashboards")
         return self.__parse_response(self._request.call(
@@ -294,7 +289,8 @@ class PodDashboard(PodBase):
             super(PodDashboard, self)._get_sc_product_settings("/v1/userreport/{id}"), params=kwargs,
             headers=self._get_headers(), internal=False, **kwargs))
 
-    def execute_user_report(self, user_report_id, page=0, size=10, load_from_cache=True, execute_params=None, **kwargs):
+    def execute_user_report(self, user_report_id, page=0, size=10, load_from_cache=False, execute_params=None,
+                            **kwargs):
         """
         اجرای گزارش کاربر
 
@@ -302,7 +298,7 @@ class PodDashboard(PodBase):
         :param int page: شماره صفحه
         :param int size: تعداد رکورد برگشتی
         :param bool load_from_cache: خروجی از کش بارگذاری شود یا مجددا کوئری اجرا شود؟
-        :param dict execute_params: اطلاعات لازم برای اجرای گزارش
+        :param dict|None execute_params: اطلاعات لازم برای اجرای گزارش
         :return: dict
         """
         kwargs["user_report_id"] = user_report_id
@@ -325,7 +321,7 @@ class PodDashboard(PodBase):
         :param bool force_save: آیا خروجی حتما در پاد اسپیس ذخیره شود؟
         :param dict execute_params: اطلاعات لازم برای اجرای گزارش
         :param str save_to: آدرس محل ذخیره سازی خروجی
-        :return: dict
+        :return: str|bool
         """
         kwargs["forceSave"] = force_save
         kwargs["callbackUrl"] = callback_url
@@ -356,7 +352,7 @@ class PodDashboard(PodBase):
         :param bool force_save: آیا خروجی حتما در پاد اسپیس ذخیره شود؟
         :param dict execute_params: اطلاعات لازم برای اجرای گزارش
         :param str save_to: آدرس محل ذخیره سازی خروجی
-        :return: dict
+        :return: str|bool
         """
         kwargs["forceSave"] = force_save
         kwargs["callbackUrl"] = callback_url
@@ -369,10 +365,6 @@ class PodDashboard(PodBase):
 
         if save_to is None:
             return result
-        data = self._request.last_response().content
-        print(data)
-        print(result)
-        # d = io.StringIO(result)
 
         with open(save_to, "w") as f:
             f.write(result)
@@ -385,11 +377,11 @@ class PodDashboard(PodBase):
 
         :param str url: آدرس سرویس
         :param str schema_name: نام اسکیما اعتبارسنجی
-        :param dict execute_params: اطلاعات لازم برای اجرای گزارش
+        :param dict|None execute_params: اطلاعات لازم برای اجرای گزارش
         :param bool is_stream: آیا خروجی به صورت استریم است؟
         :return: dict
         """
-        if execute_params is None:
+        if execute_params is None or execute_params == {}:
             execute_params = self.__default_params()
 
         self._validate(kwargs, schema_name=schema_name)
@@ -462,7 +454,7 @@ class PodDashboard(PodBase):
 
         self._validate(kwargs, "publicExecute")
 
-        if execute_params is None:
+        if execute_params is None or execute_params == {}:
             execute_params = self.__default_params()
 
         data = {
@@ -677,9 +669,7 @@ class PodDashboard(PodBase):
         self.__raw_response = json.loads(raw_response)
         if "code" in self.__raw_response:
             if self.__raw_response["code"] == 200:
-                # return self.__raw_response["result"]
-                result = json.dumps(self.__raw_response["result"], indent=2, ensure_ascii=False)
-                return result.replace("false", "False").replace("true", "True").replace("null", "None")
+                return self.__raw_response["result"]
 
         data = self.__raw_response
         data["reference_number"] = self._request._reference_number

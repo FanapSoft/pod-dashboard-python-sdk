@@ -12,7 +12,8 @@
                     },
                     "name": {
                         "type": "string",
-                        "description": "نام داشبورد"
+                        "description": "نام داشبورد",
+                        "minLength": 1
                     },
             "scVoucherHash": {
                 "type": "array",
